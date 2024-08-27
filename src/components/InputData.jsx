@@ -1,6 +1,6 @@
 import image from "../assets/investment-calculator-logo.png";
 
-export default function InputData() {
+export default function InputData({intitalInvestment, annualInvestment, expectedReturn, duration}) {
   return (
     <>
       <div id="header">
@@ -11,21 +11,21 @@ export default function InputData() {
         <div className="input-group">
           <p>
             <label>Initial Investment</label>
-            <input type="number" />
+            <input value={intitalInvestment} type="number" />
           </p>
           <p>
             <label>Annual Investment</label>
-            <input type="number" />
+            <input value={annualInvestment} type="number" />
           </p>
         </div>
         <div className="input-group">
           <p>
             <label>Expected Return</label>
-            <input type="number" />
+            <input value={expectedReturn} type="number" />
           </p>
           <p>
             <label>Duration</label>
-            <input type="number" />
+            <input value={duration} type="number" />
           </p>
         </div>
       </div>
