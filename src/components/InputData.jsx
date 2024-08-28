@@ -1,6 +1,11 @@
 import image from "../assets/investment-calculator-logo.png";
 
-export default function InputData({intitalInvestment, annualInvestment, expectedReturn, duration}) {
+export default function InputData({
+  intitalInvestment,
+  annualInvestment,
+  expectedReturn,
+  duration
+}) {
   return (
     <>
       <div id="header">
