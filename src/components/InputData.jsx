@@ -1,10 +1,14 @@
 import image from "../assets/investment-calculator-logo.png";
 
 export default function InputData({
-  intitalInvestment,
+  initialInvestment, // Corrected typo
+  onInitialInvestmentChange,
   annualInvestment,
+  onAnnualInvestmentChange,
   expectedReturn,
-  duration
+  onExpectedReturnChange,
+  duration,
+  onDurationChange,
 }) {
   return (
     <>
@@ -16,21 +20,37 @@ export default function InputData({
         <div className="input-group">
           <p>
             <label>Initial Investment</label>
-            <input value={intitalInvestment} type="number" />
+            <input
+              value={initialInvestment} // Corrected typo
+              type="number"
+              onChange={onInitialInvestmentChange} // Pass event implicitly
+            />
           </p>
           <p>
             <label>Annual Investment</label>
-            <input value={annualInvestment} type="number" />
+            <input
+              value={annualInvestment}
+              type="number"
+              onChange={onAnnualInvestmentChange} // Pass event implicitly
+            />
           </p>
         </div>
         <div className="input-group">
           <p>
             <label>Expected Return</label>
-            <input value={expectedReturn} type="number" />
+            <input
+              value={expectedReturn}
+              type="number"
+              onChange={onExpectedReturnChange} // Pass event implicitly
+            />
           </p>
           <p>
             <label>Duration</label>
-            <input value={duration} type="number" />
+            <input
+              value={duration}
+              type="number"
+              onChange={onDurationChange} // Pass event implicitly
+            />
           </p>
         </div>
       </div>

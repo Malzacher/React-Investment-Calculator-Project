@@ -7,28 +7,32 @@ function App() {
   const [expectedReturn, setExpectedReturn] = useState("0");
   const [duration, setDuration] = useState("0");
   
-  function handleInitialInvestmentChange(e) {
-    setInitialInvestment(e.target.value);
+  function handleInitialInvestmentChange(event) {
+    setInitialInvestment(event.target.value);
   }
 
-  function handleAnnualInvestmentChange(e) {
-    setAnnualInvestment(e.target.value);
+  function handleAnnualInvestmentChange(event) {
+    setAnnualInvestment(event.target.value);
   }
 
-  function handleExpectedReturnChange(e) {
-    setExpectedReturn(e.target.value);
+  function handleExpectedReturnChange(event) {
+    setExpectedReturn(event.target.value);
   }
 
-  function handleDurationChange(e) {
-    setDuration(e.target.value);
+  function handleDurationChange(event) {
+    setDuration(event.target.value);
   }
 
   return (
     <InputData
       initialInvestment={initialInvestment}
+      onInitialInvestmentChange={handleInitialInvestmentChange}
       annualInvestment={annualInvestment}
+      onAnnualInvestmentChange={handleAnnualInvestmentChange}
       expectedReturn={expectedReturn}
+      onExpectedReturnChange={handleExpectedReturnChange}
       duration={duration}
+      onDurationChange={handleDurationChange}
     />
   );
 }
