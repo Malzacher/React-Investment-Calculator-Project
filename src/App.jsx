@@ -1,4 +1,5 @@
 import InputData from "./components/InputData.jsx";
+import TableData from "./components/TableData.jsx";
 import { useState } from "react";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   const [annualInvestment, setAnnualInvestment] = useState("0");
   const [expectedReturn, setExpectedReturn] = useState("0");
   const [duration, setDuration] = useState("0");
-  
+
   function handleInitialInvestmentChange(event) {
     setInitialInvestment(event.target.value);
   }
@@ -24,16 +25,24 @@ function App() {
   }
 
   return (
-    <InputData
-      initialInvestment={initialInvestment}
-      onInitialInvestmentChange={handleInitialInvestmentChange}
-      annualInvestment={annualInvestment}
-      onAnnualInvestmentChange={handleAnnualInvestmentChange}
-      expectedReturn={expectedReturn}
-      onExpectedReturnChange={handleExpectedReturnChange}
-      duration={duration}
-      onDurationChange={handleDurationChange}
-    />
+    <>
+      <InputData
+        initialInvestment={initialInvestment}
+        onInitialInvestmentChange={handleInitialInvestmentChange}
+        annualInvestment={annualInvestment}
+        onAnnualInvestmentChange={handleAnnualInvestmentChange}
+        expectedReturn={expectedReturn}
+        onExpectedReturnChange={handleExpectedReturnChange}
+        duration={duration}
+        onDurationChange={handleDurationChange}
+      />
+      <TableData
+        initialInvestment={initialInvestment}
+        annualInvestment={annualInvestment}
+        expectedReturn={expectedReturn}
+        duration={duration}
+      />
+    </>
   );
 }
 

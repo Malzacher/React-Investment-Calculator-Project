@@ -87,3 +87,37 @@ body {
 .center {
   text-align: center;
 }
+
+#result {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
+#result table {
+  width: 100%;
+  table-layout: fixed; /* Ensures columns are evenly spaced */
+  border-collapse: collapse;
+}
+
+#result th,
+#result td {
+  padding: 0.5rem;
+  border: 1px solid #76c0ae; /* Optional: Adds a border to table cells */
+  text-align: left;
+}
+
+#result th {
+  font-size: 0.7rem;
+  color: #83e6c0;
+  text-align: left;
+  font-weight: bold;
+}
+
+#result td {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.85rem;
+  color: #c2e9e0;
+}
