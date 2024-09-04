@@ -3,10 +3,10 @@ import TableData from "./components/TableData.jsx";
 import { useState } from "react";
 
 function App() {
-  const [initialInvestment, setInitialInvestment] = useState("0");
-  const [annualInvestment, setAnnualInvestment] = useState("0");
-  const [expectedReturn, setExpectedReturn] = useState("0");
-  const [duration, setDuration] = useState("0");
+  const [initialInvestment, setInitialInvestment] = useState("");
+  const [annualInvestment, setAnnualInvestment] = useState("");
+  const [expectedReturn, setExpectedReturn] = useState("");
+  const [duration, setDuration] = useState("1");
 
   function handleInitialInvestmentChange(event) {
     setInitialInvestment(event.target.value);
