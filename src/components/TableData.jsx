@@ -28,13 +28,22 @@ export default function TableData({
         <tbody>
           {investmentResults.map(function (result, index) {
             return (
-              <div key={index}>
-                <th>Year</th>
-            <th>{annualData.interest[index]}</th>
-            <th>Interest (Year)</th>
-            <th>Total Interest</th>
-            <th>Invested Capital</th>
-              </div>
+              <tr key={index}>
+                <td>{result.year}</td>
+                <td>{formatter.format(result.valueEndOfYear)}</td>
+                <td>{formatter.format(result.interest)}</td>
+                <td>
+                  {formatter.format(
+                    result.valueEndOfYear -
+                      (initialInvestment + annualInvestment * (index + 1))
+                  )}
+                </td>
+                <td>
+                  {formatter.format(
+                    initialInvestment + annualInvestment * (index + 1)
+                  )}
+                </td>
+              </tr>
             );
           })}
         </tbody>

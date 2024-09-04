@@ -37,10 +37,10 @@ function App() {
         onDurationChange={handleDurationChange}
       />
       <TableData
-        initialInvestment={initialInvestment}
-        annualInvestment={annualInvestment}
-        expectedReturn={expectedReturn}
-        duration={duration}
+        initialInvestment={parseFloat(initialInvestment) || 0}
+        annualInvestment={parseFloat(annualInvestment) || 0}
+        expectedReturn={parseFloat(expectedReturn) || 0}
+        duration={parseInt(duration) || 0}
       />
     </>
   );
